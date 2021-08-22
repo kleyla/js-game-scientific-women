@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;1,100&display=swap");
+
+:root {
+  --one: #f197c0;
+  --two: #fec9a7;
+  --three: #a5f8ce;
+  --four: #fefd97;
+  --five: #c5ebfe;
+  --six: #b49fdc;
+  --d-one: #f4519a;
+  --dark: #072540;
+}
+
+@font-face {
+  font-family: modernline;
+  src: url("../fonts/modernline.otf") format("opentype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: modernline;
+}
+main {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+section {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+}
+#start-section {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  margin: 16px 0;
+  text-align: center;
+  font-size: 100px;
+}
+
+#start-section img {
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+button {
+  background-color: var(--one);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  margin: 16px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* helpers */
+.square {
+  width: 500px;
+  height: 500px;
+}
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
