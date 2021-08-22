@@ -14,6 +14,9 @@ const data = [
 document.addEventListener("DOMContentLoaded", () => {
   const scrollContainer = document.querySelector("#container");
   const audio = document.querySelector("#audio-btn");
+  const audioHappy = document.querySelector("#audio-happy");
+  const audioSad = document.querySelector("#audio-sad");
+  const audioCelebrate = document.querySelector("#audio-celebrate");
 
   scrollContainer.addEventListener("wheel", (evt) => {
     evt.preventDefault();
@@ -71,16 +74,17 @@ document.addEventListener("DOMContentLoaded", () => {
         Swal.fire({
           icon: "success",
           title: "Bien hecho!",
-          text: "You clicked the button!",
+          text: "Continua",
           customClass: {
             confirmButton: "btn-color",
           },
         });
+        audioCelebrate.play();
       } else {
         Swal.fire({
           icon: "error",
           title: "Ups...",
-          text: "Error!",
+          text: "Sigue intentando",
           customClass: {
             confirmButton: "btn-color",
           },
