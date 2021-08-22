@@ -18,16 +18,43 @@
   </head>
   <body>
     <audio id="audio-btn" src="./assets/sounds/press_start.wav"></audio>
+    <audio id="audio-happy" src="./assets/sounds/audio_happy.wav"></audio>
+    <audio id="audio-sad" src="./assets/sounds/audio-sad.wav"></audio>
+    <audio
+      id="audio-celebrate"
+      src="./assets/sounds/efecto_festejo.wav"
+    ></audio>
+
     <div id="start-section">
       <div class="start-container animate__animated animate__pulse">
-        <h1>Ada Lovelace</h1>
-        <img src="./assets/images/adaPequeña.png" alt="" />
-
-        <button id="start-btn">Empezar</button>
+        <div class="img-backgound"></div>
+        <!-- <img src="./assets/images/mujeresenlaCiencia.jpg" alt="mujeresenlaCiencia" /> -->
+        <div class="start-content">
+          <h1>Mujeres en la Ciencia</h1>
+          <button id="start-btn">Empezar</button>
+        </div>
       </div>
     </div>
 
     <main id="container" class="container hidden">
+      <section>
+        <div class="container-section section-title">
+          <p>
+            Augusta Ada Byron nació en Londres el 10 de diciembre de 1815, sus
+            padres son: imágenes con sus nombres y profesión y estudios.
+          </p>
+          <p>
+            “Después que Byron y Anna se casaron y tuvieron a Ada, Byron le
+            engañó con otra mujer”
+          </p>
+          <img
+            src="./assets/images/adaPequeña2.png"
+            class="circle"
+            alt="ada pequeña"
+          />
+        </div>
+      </section>
+
       <section>
         <form>
           <h3 id="question1"></h3>
@@ -38,6 +65,30 @@
       </section>
 
       <section>
+        <div class="container-section">
+          <p>
+            Ada enfermó de sarampión a los 13 años (mostrar otra imagen de Ada
+            pequeña) Esta enfermedad la dejó paralizada de las piernas por 3
+            años. Durante ese tiempo se dedicó a estudiar a las aves y la
+            proporción de sus alas, quería construir un aparato con el cual
+            pudiera volar. (Mostrar imagen de planos y bocetos de los planos)
+          </p>
+          <div class="images-collection">
+            <img
+              src="./assets/images/AdaJoven.png"
+              class="circle"
+              alt="ada pequeña"
+            />
+            <img
+              src="./assets/images/maryTutoraDeAda(2).png"
+              class="animate__animated animate__fadeInRight"
+              alt="tutora de ada"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
         <form>
           <h3 id="question2"></h3>
           <div id="options2"></div>
@@ -45,9 +96,6 @@
           <button type="submit">Confirmar</button>
         </form>
       </section>
-
-      <section class="square red"></section>
-      <section class="square blue"></section>
     </main>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
