@@ -13,6 +13,7 @@ const data = [
 
 document.addEventListener("DOMContentLoaded", () => {
   const scrollContainer = document.querySelector("#container");
+  const audio = document.querySelector("#audio-btn");
 
   scrollContainer.addEventListener("wheel", (evt) => {
     evt.preventDefault();
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const main = document.querySelector("#container");
 
   startBtn.addEventListener("click", () => {
+    audio.play();
     // startSection.classList.remove("animate__pulse");
     startSection.classList.add("animate__animated", "animate__backOutUp");
 
@@ -58,6 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
   forms.forEach((form, index) => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+      audio.play();
+
       const options = document.querySelectorAll(
         `input[name="options${index + 1}"]`
       );
@@ -68,12 +72,18 @@ document.addEventListener("DOMContentLoaded", () => {
           icon: "success",
           title: "Bien hecho!",
           text: "You clicked the button!",
+          customClass: {
+            confirmButton: "btn-color",
+          },
         });
       } else {
         Swal.fire({
           icon: "error",
           title: "Ups...",
           text: "Error!",
+          customClass: {
+            confirmButton: "btn-color",
+          },
         });
       }
     });

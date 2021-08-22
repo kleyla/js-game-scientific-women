@@ -99,13 +99,16 @@ form h3 {
 .rotate-right {
   transform: rotate(-4deg);
 }
+.btn-color {
+  background-color: var(--one) !important;
+}
 /* helpers */
 .square {
   width: 500px;
   height: 500px;
 }
 .red {
-  background-color: red;
+  background-color: red !important;
 }
 .blue {
   background-color: blue;
