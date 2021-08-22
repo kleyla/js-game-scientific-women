@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/ada-icon.png"
+      type="image/x-icon"
+    />
     <title>Game</title>
     <link
       rel="stylesheet"
@@ -12,18 +17,39 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
-    <div id="start-section" class="animate__animated animate__pulse">
-      <h1>Ada Lovelace</h1>
-      <img src="./assets/images/adaPequeña.png" alt="" />
+    <div id="start-section">
+      <div class="start-container animate__animated animate__pulse">
+        <h1>Ada Lovelace</h1>
+        <img src="./assets/images/adaPequeña.png" alt="" />
 
-      <button id="start-btn">Empezar</button>
+        <button id="start-btn">Empezar</button>
+      </div>
     </div>
 
     <main id="container" class="container hidden">
+      <section>
+        <form>
+          <h3 id="question1"></h3>
+          <div id="options1"></div>
+
+          <button type="submit">Confirmar</button>
+        </form>
+      </section>
+
+      <section>
+        <form>
+          <h3 id="question2"></h3>
+          <div id="options2"></div>
+
+          <button type="submit">Confirmar</button>
+        </form>
+      </section>
+
       <section class="square red"></section>
       <section class="square blue"></section>
     </main>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
