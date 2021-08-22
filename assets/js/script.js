@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const audioHappy = document.querySelector("#audio-happy");
   const audioSad = document.querySelector("#audio-sad");
   const audioCelebrate = document.querySelector("#audio-celebrate");
+  const sections = document.querySelectorAll("section");
+  const images = document.querySelectorAll("img");
 
   scrollContainer.addEventListener("wheel", (evt) => {
     evt.preventDefault();
@@ -29,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startBtn.addEventListener("click", () => {
     audio.play();
-    // startSection.classList.remove("animate__pulse");
+
     startSection.classList.add("animate__animated", "animate__backOutUp");
 
     setInterval(() => {
@@ -91,5 +93,34 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     });
+  });
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        const currentIndex = Array.from(sections).indexOf(entry.target);
+        if (entry.isIntersecting) {
+          images[currentIndex].classList.add(
+            "animate__fadeInLeft",
+            "animate__slower"
+          );
+        } else {
+          if (entry.boundingClientRect.y > 0) {
+            images[currentIndex].classList.remove(
+              "animate__fadeInLeft",
+              "animate__slower"
+            );
+          }
+        }
+      });
+    },
+    {
+      root: scrollContainer,
+      threshold: 0.1,
+    }
+  );
+
+  sections.forEach((section) => {
+    observer.observe(section);
   });
 });
