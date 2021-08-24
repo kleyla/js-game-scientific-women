@@ -7,7 +7,7 @@ const data = [
   {
     question: "Ada se dedicó a estudiar...",
     options: ["Arte", "Astronomía", "Poesía", "Química", "Matemáticas"],
-    answer: 0,
+    answer: 4,
   },
 ];
 
@@ -31,7 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startBtn.addEventListener("click", () => {
     audio.play();
-
+    setInterval(() => {
+      audioSad.play();
+    }, 300);
     startSection.classList.add("animate__animated", "animate__backOutUp");
 
     setInterval(() => {
@@ -73,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const answer = data[index].answer;
 
       if (options[answer].checked) {
+        // audioHappy.play();
         Swal.fire({
           icon: "success",
           title: "Bien hecho!",
