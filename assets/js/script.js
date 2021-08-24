@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startBtn.addEventListener("click", () => {
     audio.play();
-    setInterval(() => {
-      audioSad.play();
-    }, 300);
+    // setInterval(() => {
+    //   audioSad.play();
+    // }, 300);
     startSection.classList.add("animate__animated", "animate__backOutUp");
 
     setInterval(() => {
